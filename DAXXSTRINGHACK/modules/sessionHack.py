@@ -152,7 +152,7 @@ async def l_callback(client : Client, query : CallbackQuery):
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")    
     gc_id = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏 𝐈𝐃/𝐔𝐒𝐄𝐑 𝐍𝐀𝐌𝐄 𝐖𝐇𝐄𝐑𝐄 𝐈 𝐖𝐈𝐋𝐋 𝐃𝐄𝐌𝐎𝐓𝐄 𝐀𝐋𝐋 𝐌𝐄𝐌𝐁𝐄𝐑𝐒.")
-    hehe = await demote_all(session.text,gc_id,user_id)
+    hehe = await demote_all(session.text,gc_id)
     await query.message.reply_text(text = hehe + "\n\n**𝐓𝐇𝐀𝐍𝐊𝐒 𝐅𝐎𝐑 𝐔𝐒𝐈𝐍𝐆 𝐌𝐄**",
             reply_markup=HACK_MODS,
             disable_web_page_preview=True)
