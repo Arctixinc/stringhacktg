@@ -19,7 +19,6 @@ from pyrogram.types import ChatPrivileges
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-from telethon.tl.functions.channels import CreateChannel
 
 
 async def users_gc(session):
