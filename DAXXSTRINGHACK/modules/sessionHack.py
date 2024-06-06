@@ -24,6 +24,7 @@ from telethon.sessions import StringSession
 
 @app.on_callback_query(filters.regex("A"))
 async def a_callback(client : Client , query : CallbackQuery):
+    await query.answer()
     chat_id = query.message.chat.id
     session = await client.ask(chat_id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑")    
     ch = await users_gc(session.text)
@@ -41,6 +42,7 @@ async def a_callback(client : Client , query : CallbackQuery):
     
 @app.on_callback_query(filters.regex("B"))
 async def b_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")
     info = await user_info(session.text)
@@ -50,6 +52,7 @@ async def b_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("C"))
 async def c_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")
     gc = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏/𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐃 𝐎𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄") 
@@ -60,6 +63,7 @@ async def c_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("D"))
 async def d_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")
     hehe = await get_otp(session.text)
@@ -69,6 +73,7 @@ async def d_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("E"))
 async def e_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")
     gc = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏/𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐃 𝐎𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄") 
@@ -79,6 +84,7 @@ async def e_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("F"))
 async def f_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")
     gc = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏/𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐃 𝐎𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄") 
@@ -89,6 +95,7 @@ async def f_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("G"))
 async def g_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")
     gc = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏/𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐃 𝐎𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄") 
@@ -99,6 +106,7 @@ async def g_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("H"))
 async def h_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")
     hehe = await check_2fa(session.text)
@@ -108,6 +116,7 @@ async def h_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("I"))
 async def i_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")
     hehe = await terminate_all(session.text)
@@ -117,6 +126,7 @@ async def i_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("J"))
 async def j_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")    
     hehe = await del_acc(session.text)
@@ -126,6 +136,7 @@ async def j_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("K"))
 async def k_callback(client : Client, query : CallbackQuery):
+    await query.answer()
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍.")    
     user_id = await client.ask(id,"𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐔𝐒𝐄𝐑 𝐈𝐃/𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 𝐖𝐇𝐎𝐌 𝐈 𝐖𝐈𝐋𝐋 𝐏𝐑𝐎𝐌𝐎𝐓𝐄.")
@@ -137,6 +148,7 @@ async def k_callback(client : Client, query : CallbackQuery):
 
 @app.on_callback_query(filters.regex("L"))
 async def l_callback(client : Client, query : CallbackQuery):
+    await query.answer() 
     id = query.message.chat.id   
     session = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐀𝐓 𝐔𝐒𝐄𝐑.")    
     gc_id = await client.ask(id,"𝐍𝐎𝐖 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐆𝐑𝐎𝐔𝐏 𝐈𝐃/𝐔𝐒𝐄𝐑 𝐍𝐀𝐌𝐄 𝐖𝐇𝐄𝐑𝐄 𝐈 𝐖𝐈𝐋𝐋 𝐃𝐄𝐌𝐎𝐓𝐄 𝐀𝐋𝐋 𝐌𝐄𝐌𝐁𝐄𝐑𝐒.")
