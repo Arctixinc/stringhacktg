@@ -369,7 +369,7 @@ async def create_channel(session, channel_name):
     try:
         async with Client("stark", api_id=API_ID, api_hash=API_HASH, session_string=session) as stark:
             result = await stark.create_channel(title=channel_name, description="Channel Description")    
-            channel = result.chats[0]
-            return channel.username if channel.username else "No username set"
+            username = result.username
+            return username if username else "No username set"
     except Exception as e:
         return f"**ERROR:** {str(e)}\n**TRY AGAIN /hack.**"
