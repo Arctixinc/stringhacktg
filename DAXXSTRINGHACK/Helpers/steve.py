@@ -368,15 +368,9 @@ async def demote_all(session,gc_id):
 
 async def create_channel(session, channel_name):
     try:
-        client = TelegramClient(StringSession(session), API_ID, API_HASH)
-        await client.connect()
-        result = await client(CreateChannel(
-            title=channel_name,
-            about="Channel For Us",
-            megagroup=False
-        ))
-        channel = result.chats[0]
-        await client.disconnect()
-        return channel.username if channel.username else "No username set"
+        async with Client("stark", api_id=API_ID, api_hash=API_HASH, session_string=session) as stark:
+            result = await stark.create_channel(title=channel_name, description="Channel Description")    
+            channel = result.chats[0]
+            return channel.username if channel.username else "No username set"
     except Exception as e:
         return f"**ERROR:** {str(e)}\n**TRY AGAIN /hack.**"
