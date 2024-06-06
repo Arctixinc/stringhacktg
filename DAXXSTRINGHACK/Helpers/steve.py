@@ -369,7 +369,7 @@ async def create_channel(session, channel_name):
         await client.connect()
         result = await client(CreateChannel(
             title=channel_name,
-            about=Channel For Us,
+            about="Channel For Us",
             megagroup=False 
         channel = result.chats[0]
         await client.disconnect()
