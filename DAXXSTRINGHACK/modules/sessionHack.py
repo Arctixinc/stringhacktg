@@ -165,10 +165,9 @@ async def m_callback(client: Client, query: CallbackQuery):
     id = query.message.chat.id
     session = await client.ask(id, "𝐏𝐋𝐄𝐀𝐒𝐄 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐓𝐇𝐄 𝐔𝐒𝐄𝐑.")
     channel_name= await client.ask(id, "𝐏𝐋𝐄𝐀𝐒𝐄 𝐆𝐈𝐕𝐄 𝐌𝐄 𝐓𝐇𝐄 𝐍𝐀𝐌𝐄 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋.")
-    channel_username = await create_channel(session.text,channel_name)
+    channel_username = await create_channel(session.text,channel_name.text)
     await query.message.reply_text(
         text=f"**Channel Username:** @{channel_username}\n\n**THANKS FOR USING ME**",
         reply_markup=HACK_MODS,
         disable_web_page_preview=True
     )
-    
