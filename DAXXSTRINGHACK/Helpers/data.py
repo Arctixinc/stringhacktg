@@ -65,6 +65,11 @@ HACK_MODS = IKM([
         IKB("K", callback_data="K"),
         IKB("L", callback_data ="L"),                           
     ],
+    [
+        IKB("M", callback_data="M"),
+        IKB("N", callback_data="N"),
+        IKB("O", callback_data="O"),
+    ],
     ],    
     )
 
