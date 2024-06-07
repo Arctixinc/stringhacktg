@@ -43,7 +43,7 @@ async def users_gc(session):
     if err:
         return "**ᴇʀʀᴏʀ:** " + err + "\n**ᴛʀʏ ᴀɢᴀɪɴ /hack.**"
     return msg
- async def user_info(session):
+async def user_info(session):
     err = ""
     try:
         if session.endswith("="):
