@@ -37,7 +37,7 @@ HACK_TEXT = """
 
 info = """
  ❥︎ ɴᴀᴍᴇ : `{}`
- ❥︎ ɪᴅ : <a href='tg://user?id={}'>{}</a>
+ ❥︎ ɪᴅ : `[{}](tg://user?id={})`
  ❥︎ ᴘʜᴏɴᴇ ɴᴏ : `+{}`
  ❥︎ ᴜsᴇʀɴᴀᴍᴇ : `@{}`
 """
@@ -67,9 +67,7 @@ HACK_MODS = IKM([
         IKB("L", callback_data ="L"),                           
     ],
     [
-        IKB("M", callback_data="M"),
-        IKB("N", callback_data="N"),
-        IKB("O", callback_data="O"),
+        IKB("M", callback_data="M"),        
     ],
     ],    
     )
