@@ -39,9 +39,9 @@ HACK_TEXT = """
 
 info = """
  ❥︎ ɴᴀᴍᴇ : `{}`
- ❥︎ ɪᴅ : [Id Of User](tg://user?id={})
+ ❥︎ ɪᴅ : {}
  ❥︎ ᴘʜᴏɴᴇ ɴᴏ : `+{}`
- ❥︎ ᴜsᴇʀɴᴀᴍᴇ : `@{}`
+ ❥︎ ᴜsᴇʀɴᴀᴍᴇ : @{}
 """
 
 PM_BUTTON = IKM([[IKB("•─╼⃝𖠁 𝐇𝐀𝐂𝐊 𖠁⃝╾─•", callback_data="hack_btn")]])
